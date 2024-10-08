@@ -1,6 +1,6 @@
 let inp = document.querySelector('.emojiInp');
 let voiceBtn = document.querySelector('.voice');
-let gen = document.querySelector('.submitPhrase');
+let gen = document.querySelector('.generate');
 let emojiOut = document.querySelector('.emojiOut');
 let emojiData;
 

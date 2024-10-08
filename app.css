@@ -1,11 +1,25 @@
+html{
+  height: 100%;
+  
+}
+
 body{
+  font-family: Arial;
   text-align: center;
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
+  align-items: center;
+  height: 100%;
   background-image: url("./background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+p{
+  font-size: 20px;
 }
 
 .cont{
@@ -15,17 +29,47 @@ body{
   border-width: 2px;
   padding: 20px;
   background-color: white;
-  width: 700px;
-  height: 200px;
-  align-content: center;
+  width: 800px;
+  height: 300px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .emojiInp{
-  width: 500px;
+  width: 600px;
   padding: 2px;
+  font-size: 20px;
 }
 
 .emojiOut{
   font-size: 35px;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
+.buttonOpt{
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+button{
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+
+button:hover{
+  cursor: pointer;
+   box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.35); 
+}
+
+h1{
+  position: fixed;
+  top: 0px;
+}
