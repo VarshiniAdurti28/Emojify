@@ -1,0 +1,31 @@
+body{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.cont{
+  margin: 50px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  background-color: white;
+  width: 700px;
+  height: 200px;
+  align-content: center;
+}
+
+.emojiInp{
+  width: 500px;
+  padding: 2px;
+}
+
+.emojiOut{
+  font-size: 35px;
+}
+

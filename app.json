@@ -1,0 +1,17 @@
+{
+  "&#x2678": [	"recycle" , "recycling" , "symbol"],
+  "&#x1F4B2": [	"billion" , "cash" , "charge" , "currency" , "dollar" ,"million" , "money" , "pay"],
+  "&#x267E" : ["forever" , "infinity" , "unbounded" ," universal"],
+  "&#x1F6D0" : [ "place", "pray" , "religion" , "worship"],
+  "&#x1F3A5" : [	"bollywood","camera","cinema","film","hollywood","movie","record"],
+  "&#x1F385": ["music","musical","note","notes","sound"],
+  "&#x1F389": ["celebrate","celebration","hooray","party","popper","tada","woohoo"],
+
+  "&#x1F525": [	"burn","fire","flame","hot","heat","lit"],
+  "&#x1F31E" : 	["bright","day","shine","sun","sunny","sunshine","weather"],
+  "&#x1F44F": [	"applause","awesome","clap","congrats","congratulations"],
+  "&#x1F44C": ["awesome","got","gotcha","OK","okay" ],
+  "&#x1F44B": ["bye","greetings","hand","hello","hey","hi","wave","yo"],
+  "&#x1F4AF": ["100","A+","agree","definitely","hundred","perfect","point","TRUE","truth"]
+
+}
