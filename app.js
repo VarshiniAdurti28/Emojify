@@ -1,6 +1,6 @@
 let inp = document.querySelector('.emojiInp');
 let voiceBtn = document.querySelector('.voice');
-let gen = document.querySelector('.generate');
+//let gen = document.querySelector('.generate');
 let emojiOut = document.querySelector('.emojiOut');
 let emojiData;
 
@@ -20,9 +20,9 @@ voiceBtn.addEventListener("click", () => {
 });
 
 
-gen.addEventListener('click', ()=>{
-let inpWords = inp.value.toLowerCase().split(/[\s,-]+/);
-Translate(inpWords);
+inp.addEventListener('input', ()=>{
+  let inpWords = inp.value.toLowerCase().split(/[\s,-]+/);
+  Translate(inpWords);
 //console.log(inpWords);
 })
 
@@ -46,6 +46,7 @@ async function Translate(inpWords){
       value = value.map(word => word.toLowerCase());
       if(value.includes(word)){
           emojiOut.innerHTML+=`${key}`;
+          break;
       }
     }
   }
