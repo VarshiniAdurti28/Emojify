@@ -79,3 +79,18 @@ button:hover{
   width: 100%;
   box-shadow: 2px 2px 5px 5px rgba(255,228,198, 0.375);
 }
+
+
+.emoji{
+  display: inline;
+}
+
+.emoji:hover{
+  background-color: rgba(238, 234, 234, 0.422);
+  cursor: pointer;
+}
+
+
+.emojiDisp{
+  display: none;
+}

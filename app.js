@@ -24,7 +24,7 @@ recognition.onresult = function(event) {
 voiceBtn.addEventListener("click", () => {
   inp.value="";
   emojiOut.innerHTML="";
- recognition.start();
+  recognition.start();
   
   
  
@@ -44,23 +44,61 @@ let fetchData = fetch('./app.json')
 
 //Function using the promise to acess and work on emojiData fetched
 
+
+let emojiMatches= {};
+
 async function Translate(inpWords){
   emojiOut.innerHTML="";
   emojiData = await fetchData;
   // console.log(emojiData);
 
-  for(let word of inpWords){
-    for (let [key, value] of Object.entries(emojiData)) {
+  emojiMatches={};
 
+  for(let word of inpWords){
+    let count =0;
+    emojiMatches[word] =[];
+    for (let [key, value] of Object.entries(emojiData)) {
+      
+      
       value = value.map(word => word.toLowerCase());
       if(value.includes(word)){
-          emojiOut.innerHTML+=`${key}`;
-          break;
+          count++;
+          let newEmoji = document.createElement('div');
+          newEmoji.classList.add('emoji');
+          newEmoji.innerHTML= `${key}`;
+
+          if(count==1){
+            
+            emojiOut.append(newEmoji);
+          }
+      
+          emojiMatches[word].push(key);
       }
+
+    
     }
   }
 
+
+
+  await emojiChange();
+
+
+
+
+
+
+
 };
+
+
+function emojiChange(){
+  console.log(emojiMatches);
+}
+
+
+
+
 
 
 
