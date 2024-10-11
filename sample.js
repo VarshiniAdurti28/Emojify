@@ -21,13 +21,32 @@ recognition.onresult = function(event) {
   
 };
 
-voiceBtn.addEventListener("click", () => {
+voiceBtn.addEventListener("click", async () => {
   inp.value="";
   emojiOut.innerHTML="";
- recognition.start();
+ // recognition.start();
   
   
- 
+await fetch("http://127.0.0.1:5000/recognize_speech", {
+  method: "POST"
+})
+.then(response => response.json())
+.then(data => {
+  if (data.recognized_text) {
+      inp.value+=data.recognized_text;
+  } else {
+      alert("Not recognisable!");
+  }
+})
+.catch(error => {
+  alert("Error");
+  console.log(error);
+})
+
+
+await provokeTranslate();
+  
+  
 });
 
 

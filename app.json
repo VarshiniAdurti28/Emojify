@@ -1,8 +1,8 @@
 {
-  "&#x267B": ["recycle", "recycling", "symbol"],
+  "&#x267B": ["recycle", "recycling"],
   "&#x1F4B2": ["billion", "cash", "charge", "currency", "dollar", "million", "money", "pay"],
   "&#x267E": ["forever", "infinity", "unbounded", "universal"],
-  "&#x1F6D0": ["place", "pray", "religion", "worship"],
+  "&#x1F6D0": ["pray", "religion", "worship"],
   "&#x1F3A5": ["bollywood", "camera", "cinema", "film", "hollywood", "movie", "record"],
   "&#x1F3B5": ["music", "musical", "note", "notes", "sound"],
   "&#x1F389": ["celebrate", "celebration", "hooray", "party", "popper", "tada", "woohoo"],
@@ -13,10 +13,10 @@
   "&#x1F44B": ["bye", "greetings", "hand", "hello", "hey", "hi", "wave", "yo"],
   "&#x1F4AF": ["100", "A+", "agree", "definitely", "hundred", "perfect", "point", "TRUE", "truth"],
   "&#x1F600": ["face", "grin", "grinning", "happy", "smile"],
+  "&#x2764"	:  ["heart","love"],
+  "&#x1F602": ["face", "laugh", "funny", "joy"],
 
-  "&#x1F602": ["face", "tears", "laugh", "funny", "joy"],
-
-  "&#x1F605": ["smile", "sweat", "nervous", "happy"],
+  "&#x1F605": ["smile", "happy"],
   "&#x1F606": ["laugh", "grin", "happy", "face", "smile"],
   "&#x1F609": ["wink", "face", "happy", "playful"],
   "&#x1F60A": ["smile", "face", "blush", "happy"],
@@ -29,12 +29,12 @@
   "&#x1F614": ["pensive", "sad", "face", "worried"],
   "&#x1F616": ["confounded", "face", "disappointed", "worried"],
 
-
-  "&#x1F61C": ["tongue", "winking", "face", "silly"],
-  "&#x1F61D": ["tongue", "closed", "eyes", "playful"],
+  "&#x1F61C": ["winking", "face", "silly"],
+  "&#x1F61D": [ "closed", "playful"],
   "&#x1F62A": ["sleepy", "face", "tired", "exhausted"],
   "&#x1F62B": ["tired", "face", "exhausted", "weary"],
   "&#x1F631": ["scream", "fear", "scared", "face", "shock"],
   "&#x1F634": ["sleeping", "face", "snore", "zzz"],
-  "&#x1F635": ["dizzy", "face", "dead", "faint"]
+  "&#x1F635": ["dizzy", "face", "dead", "faint"],
+  "&#x1F3C3": [	"fast","hurry","man","marathon","move","quick","race","racing","run","rush","speed"]
 }
