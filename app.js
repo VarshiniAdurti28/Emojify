@@ -95,7 +95,6 @@ async function Translate(inpWords) {
 
       newEmoji.append(prevPane);
 
-
       //Adding event listeners for each of the words in inpWords
 
       // Displaying prevPane on hovering causes it to glitch, 

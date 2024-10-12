@@ -3,6 +3,7 @@ html{
   
 }
 
+
 .overlay{
   position: absolute;
   top: 0;
@@ -44,7 +45,7 @@ p{
   background-color: white;
   width: 800px;
   height: 300px;
- 
+  box-shadow:  2px 2px 3px 3px rgba(63, 61, 61, 0.52); ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,11 +54,12 @@ p{
 
 .emojiInp{
   width: 600px;
-  padding: 2px;
+  padding: 5px;
   font-size: 20px;
 }
 
 .emojiOut{
+  font-family: Calibri;
   font-size: 35px;
   margin-bottom: 25px;
   margin-top: 5px;
@@ -128,4 +130,9 @@ button:hover{
 
   box-shadow: 2px 2px 5px 5px rgba(74, 73, 75, 0.044);
 }
+
+
+
+
+
 
