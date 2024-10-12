@@ -54,5 +54,5 @@ The other files in trial are:
 - I had a fun time learning on how to play with Javascript and DOM element creation
 - I have never tried Voice Recognition in any of my projects hence learning more about WebKit Speech Recognition was fun!
 - I also gained some experience on dealing with the json object files
-- I was not able to implement the NLP part of the project. However, I will try to implement it into my project
+- I was not able to implement the NLP part of the project. However, I will try to implement it into my project soon.
 
