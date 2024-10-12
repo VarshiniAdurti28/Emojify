@@ -61,7 +61,8 @@ async function Translate(inpWords) {
     const word = inpWords[i].toLowerCase();
     const match = emojimatch[i];
 
-    if (match.length > 0) { //Some may still be empty
+    if (match.length > 0) { 
+      //Some match might still be empty so checking for length
       
       let newEmoji = document.createElement('div');
       newEmoji.classList.add('emoji');
@@ -80,6 +81,15 @@ async function Translate(inpWords) {
         altEmoji.classList.add('emoji');
         altEmoji.innerHTML = emoji;
         prevPane.append(altEmoji);
+
+        altEmoji.addEventListener('click', ()=>{
+          let temp= '';
+          //swap the emojis,
+          temp = altEmoji.innerText;
+          altEmoji.innerText= newEmoji.innerText;
+          newEmoji.innerText= temp;
+
+        })
       });
 
 
@@ -88,8 +98,11 @@ async function Translate(inpWords) {
 
       //Adding event listeners for each of the words in inpWords
 
-      // Displaying prevPane on hovering (using mouseenter)
+      // Displaying prevPane on hovering causes it to glitch, 
+      //giving a bad user experience
+      //Hence, displaying the preview Pane on click is a much better option
       newEmoji.addEventListener('click', () => {
+        //toggling display of prevPane accordingly
 
         if(prevPane.style.display=="none"){
           prevPane.style.display = "inline";
@@ -101,7 +114,7 @@ async function Translate(inpWords) {
         
       });
 
-      
+
     }
   }
 }

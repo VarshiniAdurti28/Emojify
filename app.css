@@ -3,6 +3,17 @@ html{
   
 }
 
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 31, 31, 0.427);
+  z-index: 25;
+  
+}
+
 body{
   font-family: Arial;
   text-align: center;
@@ -23,6 +34,8 @@ p{
 }
 
 .cont{
+  position: fixed;
+  z-index: 100;
   margin: 50px;
   border-radius: 20px;
   border-style: solid;
@@ -73,6 +86,7 @@ button:hover{
 
 .head{
   position: fixed;
+  z-index: 50;
   top: 0px;
   background-color: bisque;
   display: block;
@@ -85,13 +99,15 @@ button:hover{
   display: inline-block;
   margin: 2px;
   padding: 2px;
+  position: relative;
  
 }
 
 .emoji:hover{
-  background-color: rgba(63, 59, 59, 0.383);
+  background-color: rgba(136, 133, 133, 0.383);
   cursor: pointer;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px 5px rgba(74, 73, 75, 0.098);
   
 }
 
@@ -100,12 +116,14 @@ button:hover{
   position: absolute;
   background-color: white;
   border: 2px solid #2c282827;
-  transform: translate(-100px, 50px);
+  top: 100%;
+  left: 0%;
   margin: 2px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  width: auto;
   gap: 5px;
 
   box-shadow: 2px 2px 5px 5px rgba(74, 73, 75, 0.044);
