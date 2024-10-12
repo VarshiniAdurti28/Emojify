@@ -28,13 +28,9 @@ The other files in trial are:
 ## Installation steps:
 
 - Clone this repository on your machine and open it
-- Open app.html file to start Emojifying your sentences!
+- Open VS CODE after navigating into the folders
+- Right click after opening the html file and click on Open with Live Server to start a local server on your browser.
 - Check out the video in video-link folder for a quick demo of the page
-
-- One can also skip all of these and try out the Vercel Deployment to check out a quick demo of the page!
-
-  
-## Deployment on Vercel: 
 
 
 
@@ -55,5 +51,8 @@ The other files in trial are:
 
 ## Experience Gained:
 
-- 
+- I had a fun time learning on how to play with Javascript and DOM element creation
+- I have never tried Voice Recognition in any of my projects hence learning more about WebKit Speech Recognition was fun!
+- I also gained some experience on dealing with the json object files
+- I was not able to implement the NLP part of the project. However, I will try to implement it into my project
 
