@@ -46,8 +46,8 @@ p{
 
 .emojiOut{
   font-size: 35px;
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-top: 5px;
 }
 
 .buttonOpt{
@@ -82,15 +82,32 @@ button:hover{
 
 
 .emoji{
-  display: inline;
+  display: inline-block;
+  margin: 2px;
+  padding: 2px;
+ 
 }
 
 .emoji:hover{
-  background-color: rgba(238, 234, 234, 0.422);
+  background-color: rgba(63, 59, 59, 0.383);
   cursor: pointer;
+  border-radius: 10px;
+  
 }
 
 
-.emojiDisp{
-  display: none;
+.emojiPreview{
+  position: absolute;
+  background-color: white;
+  border: 2px solid #2c282827;
+  transform: translate(-100px, 50px);
+  margin: 2px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  box-shadow: 2px 2px 5px 5px rgba(74, 73, 75, 0.044);
 }
+

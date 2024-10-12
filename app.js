@@ -4,13 +4,18 @@ let voiceBtn = document.querySelector('.voice');
 let emojiOut = document.querySelector('.emojiOut');
 let emojiData;
 
+
+let emojimatch=[];
+
 //webkitSpeechRecognition for Chrome or Safari and SpeechRecognition for other browsers 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-function provokeTranslate(){
+async function provokeTranslate(){
   let inpWords = inp.value.toLowerCase().split(/[\s,-]+/);
-  Translate(inpWords);
+  await Translate(inpWords);
+  emojiPrev(inpWords);
+ 
 }
 
 recognition.onresult = function(event) {
@@ -42,59 +47,96 @@ let fetchData = fetch('./app.json')
     .catch((e)=>{console.log(e)});
 
 
-//Function using the promise to acess and work on emojiData fetched
+//Function using the promise to access and work on emojiData fetched
 
 
-let emojiMatches= {};
 
-async function Translate(inpWords){
-  emojiOut.innerHTML="";
+async function Translate(inpWords) {
+  emojiOut.innerHTML = "";  
+  emojiData = await fetchData;
+
+  await emojiPrev(inpWords);
+
+  for (let i = 0; i < inpWords.length; i++) {
+    const word = inpWords[i].toLowerCase();
+    const match = emojimatch[i];
+
+    if (match.length > 0) { //Some may still be empty
+      
+      let newEmoji = document.createElement('div');
+      newEmoji.classList.add('emoji');
+      newEmoji.innerHTML = match[0];
+      emojiOut.append(newEmoji);
+
+
+      let prevPane = document.createElement('div');
+      prevPane.classList.add('emojiPreview');
+      prevPane.style.display = "none";  // hidden but will display later on hovering
+
+      //The fist emoji is appended to the emojiOut,
+      //Preview must contain the remaining matching emojis
+      match.slice(1).forEach(emoji => {
+        let altEmoji = document.createElement('div');
+        altEmoji.classList.add('emoji');
+        altEmoji.innerHTML = emoji;
+        prevPane.append(altEmoji);
+      });
+
+
+      newEmoji.append(prevPane);
+
+
+      //Adding event listeners for each of the words in inpWords
+
+      // Displaying prevPane on hovering (using mouseenter)
+      newEmoji.addEventListener('click', () => {
+
+        if(prevPane.style.display=="none"){
+          prevPane.style.display = "inline";
+        }
+
+        else{
+          prevPane.style.display = "none";
+        }
+        
+      });
+
+      
+    }
+  }
+}
+
+
+async function emojiPrev(inpWords){
   emojiData = await fetchData;
   // console.log(emojiData);
+  
 
-  emojiMatches={};
+  for (let i = 0; i < inpWords.length; i++) {
+    const word = inpWords[i].toLowerCase();  
+    emojimatch[i] = [];
 
-  for(let word of inpWords){
-    let count =0;
-    emojiMatches[word] =[];
+   
     for (let [key, value] of Object.entries(emojiData)) {
-      
-      
-      value = value.map(word => word.toLowerCase());
-      if(value.includes(word)){
-          count++;
-          let newEmoji = document.createElement('div');
-          newEmoji.classList.add('emoji');
-          newEmoji.innerHTML= `${key}`;
+      value = value.map(word => word.toLowerCase());  
 
-          if(count==1){
-            
-            emojiOut.append(newEmoji);
-          }
       
-          emojiMatches[word].push(key);
+      if (value.includes(word)) {
+        emojimatch[i].push(key);
       }
-
-    
     }
   }
 
-
-
-  await emojiChange();
-
-
-
-
-
-
-
-};
-
-
-function emojiChange(){
-  console.log(emojiMatches);
+   
 }
+
+
+
+
+
+
+
+
 
 
 
