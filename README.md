@@ -29,8 +29,8 @@ The other files in trial are:
 
 - Clone this repository on your machine and open it
 - Open app.html file to start Emojifying your sentences!
+- Check out the video in video-link folder for a quick demo of the page
 
-  
 - One can also skip all of these and try out the Vercel Deployment to check out a quick demo of the page!
 
   
@@ -43,7 +43,7 @@ The other files in trial are:
 - Responsive Web Design which adjusts accordingly on all devices.
 - Properly Aligned Styling
 - Voice Recognition using WebKit Speech Recognition: Click on Start Speaking! button to enable voice capture and clearly speak out the sentence you wish to convert to emojis. (You can also retry until the input is correct according to you)
-- 
+
 
 
 ## Resources Used:
