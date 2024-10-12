@@ -55,7 +55,5 @@ The other files in trial are:
 
 ## Experience Gained:
 
-- I was not familiar to Svelte, so learnt basics of Svelte first. It was a fun experience as svelte binds all the elements together and makes them reactive. Svelte gave me the freedom to alter properties of elements on the page as and when required. 
-- Learnt how color conversion works, and was thus introduced to a new package called Chroma JS for the same.
-- I also realised how important it is to track down the impact of any change in one particular element in all other elements of the page. Often, I would analyse on what a particular change to the properties of a particular color codes, would result in other color codes of my project.
+- 
 
