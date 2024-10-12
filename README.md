@@ -18,13 +18,14 @@ Also add a Voice-to-Emoji Translation with integrated voice recognition so that 
 HTML, CSS, Javascript
 
 
-## Installation Steps:
-Note: the main files are app.html , app.css, app.js and app.json
+## NOTE:
+- the main files are app.html , app.css, app.js and app.json
 - app.json includes the emoji codes along with the words associated with them. This is just a initial sample json (with limited emojis) . Can be extended later on.
 The other files in trial are:
 - RecognitionSpeech.py: I tried using pyaudio to recognise speech and this is the python script for the same. Due to errors in achieving this, I switched to use WebKit Speech Recognition for the same.
   
 
+## Installation steps:
 
 - Clone this repository on your machine and open it
 - Open app.html file to start Emojifying your sentences!
